@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            position: relative;
+            background: url('https://c4.wallpaperflare.com/wallpaper/772/373/311/dog-animals-photography-wallpaper-preview.jpg') center/cover;
+            color: rgb(255, 178, 178);
+            text-align: center;
+            padding: 150px 20px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8em;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 2.2em;
+            font-style: italic;
+            margin-bottom: 40px;
+        }
+
+        /* Call to Action Button Styles */
+        .cta-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+            animation: pulse 1s infinite;
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+
+        /* About Us Section Styles */
+        .about-us {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .about-us h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .about-us p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Team Members Section Styles */
+        .member-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .member-card {
+            flex: 0 0 30%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .member-card:hover {
+            transform: scale(1.03);
+        }
+
+        .member-card img {
+            width: 80%;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .member-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .member-card p {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Keyframes for Pulse Animation */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.04);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Navigation Bar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 15px;
+            background-color: transparent;
+            /* Set background color to transparent */
+            box-shadow: none;
+            /* Remove the box shadow for transparency */
+        }
+
+        .navbar a {
+            color: #000000;
+            /* Set text color to white or your preferred color */
+            text-decoration: none;
+            padding: 14px 16px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+            /* Add a subtle background color on hover */
+        }
+
+        .dropdown-content {
+            font-size: 1.5em;
+            color: rgb(0, 0, 0);
+            
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="dropdown-content">
+            <a class="dropdown-item" href="index.html">Home</a>
+            <a class="dropdown-item" href="about.html">About Us</a>
+            <a class="dropdown-item" href="#">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- <section class="hero">
+        <h1>Welcome to the SS Pet Adoption Center</h1>
+        <p>Find your <span style="color: #000000;">perfect furry friend</span> and give them a forever home</p>
+        <a href="#about-us" class="cta-button">Learn More</a>
+    </section> -->
+
+    <section id="about-us" class="about-us">
+        <h2>About Us</h2>
+        <p>Welcome to SS Pet Center, where we believe in finding loving homes for every furry friend. Our mission is to connect pets in need with compassionate individuals and families who are ready to provide a forever home.
+        </p>
+        <p>At SS Pet Center, we are committed to promoting responsible pet ownership and creating a community that
+            values the well-being of animals. Our dedicated team works tirelessly to ensure that each adoption is a
+            perfect match, bringing joy to both pets and adopters alike.</p>
+        <p>Join us in our mission to make a difference in the lives of these wonderful animals. Together, we can create happy tails and lasting memories.</p>
+    </section>
+
+    <section id="team" class="member-cards">
+        <div class="member-card">
+            <img src="https://placekitten.com/150/150" alt="Team Member 1">
+            <h3>Kartavya Mantri</h3>
+            <p>Project Manager</p>
+        </div>
+
+        <div class="member-card">
+            <img src="https://placekitten.com/151/151" alt="Team Member 2">
+            <h3>Amey Karwarker</h3>
+            <p>Lead Developer</p>
+        </div>
+
+        <div class="member-card">
+            <img src="https://placekitten.com/152/152" alt="Team Member 3">
+            <h3>Shivansh Raj</h3>
+            <p>UX Designer</p>
+        </div>
+        
+        <div class="member-card">
+            <img src="https://placekitten.com/152/152" alt="Team Member 3">
+            <h3>Pratheek Shenoy</h3>
+            <p>UX Designer</p>
+        </div>
+
+    </section>
+
+    <!-- <footer>
+        <p>&copy; 2023 SS Pet Center</p>
+    </footer> -->
+
+</body>
+
+</html>
