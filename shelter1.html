@@ -249,7 +249,7 @@
                     <img src="https://placekitten.com/306/200" alt="Cleo the Cat">
                     <p>Age: 2.5 years</p>
                     <p>Breed: Bengal</p>
-                    <button onclick="adopt('Cleo')">Adopt Now</button>
+                    <button class="adopt-now-btn" onclick="redirectToAdoptionForm('Cleo')">Adopt Now</button>
                 </div>
 
                 <div class="pet-card">
@@ -257,7 +257,7 @@
                     <img src="https://placedog.net/304/200" alt="Rocky the Dog">
                     <p>Age: 4 years</p>
                     <p>Breed: Boxer</p>
-                    <button onclick="adopt('Rocky')">Adopt Now</button>
+                    <button class="adopt-now-btn" onclick="redirectToAdoptionForm('Rocky')">Adopt Now</button>
                 </div>
 
                 <div class="pet-card">
@@ -265,7 +265,7 @@
                     <img src="https://placekitten.com/307/200" alt="Chloe the Cat">
                     <p>Age: 1.5 years</p>
                     <p>Breed: Persian</p>
-                    <button onclick="adopt('Chloe')">Adopt Now</button>
+                    <button class="adopt-now-btn" onclick="redirectToAdoptionForm('Chloe')">Adopt Now</button>
                 </div>
 
                 <div class="pet-card">
@@ -273,7 +273,7 @@
                     <img src="https://placedog.net/305/200" alt="Tucker the Dog">
                     <p>Age: 3 years</p>
                     <p>Breed: Shih Tzu</p>
-                    <button onclick="adopt('Tucker')">Adopt Now</button>
+                    <button class="adopt-now-btn" onclick="redirectToAdoptionForm('Tucker')">Adopt Now</button>
                 </div>
 
                 <div class="pet-card">
@@ -281,7 +281,7 @@
                     <img src="https://placekitten.com/308/200" alt="Sasha the Cat">
                     <p>Age: 2 years</p>
                     <p>Breed: Siamese</p>
-                    <button onclick="adopt('Sasha')">Adopt Now</button>
+                    <button class="adopt-now-btn" onclick="redirectToAdoptionForm('Sasha')">Adopt Now</button>
                 </div>
 
                 <div class="pet-card">
@@ -289,7 +289,7 @@
                     <img src="https://placedog.net/306/200" alt="Ruby the Dog">
                     <p>Age: 2.5 years</p>
                     <p>Breed: Labrador Retriever</p>
-                    <button onclick="adopt('Ruby')">Adopt Now</button>
+                    <button class="adopt-now-btn" onclick="redirectToAdoptionForm('Ruby')">Adopt Now</button>
                 </div>
 
                 <div class="pet-card">
@@ -297,7 +297,7 @@
                     <img src="https://placekitten.com/309/200" alt="Milo the Cat">
                     <p>Age: 1 year</p>
                     <p>Breed: Maine Coon</p>
-                    <button onclick="adopt('Milo')">Adopt Now</button>
+                    <button class="adopt-now-btn" onclick="redirectToAdoptionForm('Milo')">Adopt Now</button>
                 </div>
 
                 <div class="pet-card">
@@ -305,7 +305,7 @@
                     <img src="https://placedog.net/307/200" alt="Lola the Dog">
                     <p>Age: 4 years</p>
                     <p>Breed: Golden Retriever</p>
-                    <button onclick="adopt('Lola')">Adopt Now</button>
+                    <button class="adopt-now-btn" onclick="redirectToAdoptionForm('Lola')">Adopt Now</button>
                 </div>
 
                 <div class="pet-card">
@@ -313,7 +313,7 @@
                     <img src="https://placekitten.com/310/200" alt="Jasper the Cat">
                     <p>Age: 3 years</p>
                     <p>Breed: Ragdoll</p>
-                    <button onclick="adopt('Jasper')">Adopt Now</button>
+                    <button class="adopt-now-btn" onclick="redirectToAdoptionForm('Jasper')">Adopt Now</button>
                 </div>
 
                 <div class="pet-card">
@@ -321,7 +321,7 @@
                     <img src="https://placedog.net/308/200" alt="Daisy the Dog">
                     <p>Age: 1.5 years</p>
                     <p>Breed: Beagle</p>
-                    <button onclick="adopt('Daisy')">Adopt Now</button>
+                    <button class="adopt-now-btn" onclick="redirectToAdoptionForm('Daisy')">Adopt Now</button>
                 </div>
             </div>
         </section>
@@ -336,13 +336,15 @@
     </script>
 
 
-    <!-- <footer>
+    <footer>
         <p>&copy; 2023 SS Pet Center</p>
-    </footer> -->
+    </footer>
 
     <script>
-        function adopt(petName) {
-            alert('Congratulations! You have adopted ' + petName + '!');
+        function redirectToAdoptionForm(petName) {
+            // Replace the Google Form link with your actual adoption form link
+            var adoptionFormLink = 'https://forms.gle/CgE5TPYYdGuH9DDf8';
+            window.location.href = adoptionFormLink;
         }
     </script>
 
