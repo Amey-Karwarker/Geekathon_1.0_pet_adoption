@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .hero {
+            position: relative;
+            background: url('https://c4.wallpaperflare.com/wallpaper/772/373/311/dog-animals-photography-wallpaper-preview.jpg') center/cover;
+            color: rgb(255, 178, 178);
+            text-align: center;
+            padding: 150px 20px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8em;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 2.2em;
+            font-style: italic;
+            margin-bottom: 40px;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.04);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+            animation: pulse 1s infinite;
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+
+        .transition-container {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .show {
+            opacity: 1;
+        }
+
+        .about-us {
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        .about-us h2 {
+            font-size: 2.0em;
+            margin-bottom: 20px;
+        }
+
+        .available-pets h2,
+        .testimonials h2 {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .pet-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            /* Align pet cards to the left */
+            padding: 20px;
+        }
+
+        .pet-card {
+            flex: 0 0 45%;
+            /* Adjusted width for better layout */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .pet-card:hover {
+            transform: scale(1.03);
+        }
+
+        .pet-card img {
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .pet-details {
+            flex: 0 0 45%;
+            /* Adjusted width for better layout */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .pet-details h2 {
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+
+        .pet-details p {
+            font-size: 0.9em;
+            color: #555;
+
+            margin-bottom: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <h1>Welcome to the SS Pet Adoption Center</h1>
+        <p>Find your <span style="color: #000000;">perfect furry friend</span> and give them a forever home</p>
+        <a href="#available-pets" class="cta-button" onclick="showDestination()">View Available Pets</a>
+    </section>
+
+    <section id="about-us" class="about-us">
+        <h2>About Us</h2>
+        <p>Welcome to SS Pet Center, where we believe in finding loving homes for every furry friend. Our mission is to
+            connect pets in need with compassionate individuals and families who are ready to provide a forever home.
+        </p>
+        <p>At SS Pet Center, we are committed to promoting responsible pet ownership and creating a community that
+            values the well-being of animals. Our dedicated team works tirelessly to ensure that each adoption is a
+            perfect match, bringing joy to both pets and adopters alike.</p>
+        <p>Join us in our mission to make a difference in the lives of these wonderful animals. Together, we can create
+            happy tails and lasting memories.</p>
+
+    </section>
+
+    <div id="destination" class="transition-container">
+        <section id="available-pets" class="available-pets">
+            <h2>Available Pets</h2>
+            <div class="pet-cards">
+                <div class="pet-card">
+                    <h2>Fluffy</h2>
+                    <img src="https://placekitten.com/300/200" alt="Fluffy the Cat">
+                    <p>Age: 2 years</p>
+                    <p>Breed: Domestic Shorthair</p>
+                    <button onclick="adopt('Fluffy')">Adopt Now</button>
+                </div>
+
+                <div class="pet-card">
+                    <h2>Buddy</h2>
+                    <img src="https://placedog.net/300/200" alt="Buddy the Dog">
+                    <p>Age: 3 years</p>
+                    <p>Breed: Golden Retriever</p>
+                    <button onclick="adopt('Buddy')">Adopt Now</button>
+                </div>
+
+                <!-- Add 5 more pets -->
+                <div class="pet-card">
+                    <h2>Snowball</h2>
+                    <img src="https://placekitten.com/301/200" alt="Snowball the Cat">
+                    <p>Age: 1 year</p>
+                    <p>Breed: Siamese</p>
+                    <button onclick="adopt('Snowball')">Adopt Now</button>
+                </div>
+
+                <div class="pet-card">
+                    <h2>Rusty</h2>
+                    <img src="https://placedog.net/301/200" alt="Rusty the Dog">
+                    <p>Age: 2 years</p>
+                    <p>Breed: Beagle</p>
+                    <button onclick="adopt('Rusty')">Adopt Now</button>
+                </div>
+
+                <div class="pet-card">
+                    <h2>Mittens</h2>
+                    <img src="https://placekitten.com/302/200" alt="Mittens the Cat">
+                    <p>Age: 3 years</p>
+                    <p>Breed: Maine Coon</p>
+                    <button onclick="adopt('Mittens')">Adopt Now</button>
+                </div>
+
+                <div class="pet-card">
+                    <h2>Rex</h2>
+                    <img src="https://placedog.net/302/200" alt="Rex the Dog">
+                    <p>Age: 4 years</p>
+                    <p>Breed: German Shepherd</p>
+                    <button onclick="adopt('Rex')">Adopt Now</button>
+                </div>
+
+                <div class="pet-card">
+                    <h2>Whiskers</h2>
+                    <img src="https://placekitten.com/303/200" alt="Whiskers the Cat">
+                    <p>Age: 2 years</p>
+                    <p>Breed: Persian</p>
+                    <button onclick="adopt('Whiskers')">Adopt Now</button>
+                </div>
+
+                <!-- Add 3 more pets -->
+                <div class="pet-card">
+                    <h2>Luna</h2>
+                    <img src="https://placekitten.com/304/200" alt="Luna the Cat">
+                    <p>Age: 1.5 years</p>
+                    <p>Breed: Ragdoll</p>
+                    <button onclick="adopt('Luna')">Adopt Now</button>
+                </div>
+
+                <div class="pet-card">
+                    <h2>Riley</h2>
+                    <img src="https://placedog.net/303/200" alt="Riley the Dog">
+                    <p>Age: 2.5 years</p>
+                    <p>Breed: Labrador Retriever</p>
+                    <button onclick="adopt('Riley')">Adopt Now</button>
+                </div>
+
+                <div class="pet-card">
+                    <h2>Oreo</h2>
+                    <img src="https://placekitten.com/305/200" alt="Oreo the Cat">
+                    <p>Age: 1 year</p>
+                    <p>Breed: Tuxedo</p>
+                    <button onclick="adopt('Oreo')">Adopt Now</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function showDestination() {
+            var destination = document.getElementById("destination");
+            destination.classList.add("show"); // Always add the "show" class
+        }
+    </script>
+
+
+    <!-- <footer>
+        <p>&copy; 2023 SS Pet Center</p>
+    </footer> -->
+
+    <script>
+        function adopt(petName) {
+            alert('Congratulations! You have adopted ' + petName + '!');
+        }
+    </script>
+
+</body>
+
+</html>
