@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('https://placekitten.com/1600/900'); /* Replace with your shelter image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+            overflow: hidden; /* Hide horizontal scrollbar due to fixed background */
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            text-align: center;
+            padding: 1em;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        section {
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .nav-link {
+            display: inline-block;
+            padding: 15px 30px; /* Increased size */
+            margin: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #fff;
+        }
+
+        .btn-green {
+            background-color: #8dd45b; /* Green color for Inventory */
+            color: #fff;
+        }
+
+        .btn-green:hover {
+            background-color: #45a049;
+        }
+
+        .btn-blue {
+            background-color: #3498db; /* Blue color for Step-by-Step Guide */
+            color: #fff;
+        }
+
+        .btn-blue:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-secondary {
+            background-color: rgb(191, 255, 102); /* Red color for Vet Directory */
+            color: #fff;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgb(168, 241, 96);
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Navigation Bar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 15px;
+        }
+
+        .dropdown {
+            display: inline-block;
+            position: relative;
+            user-select: none;
+        }
+
+        .dropdown-btn {
+            padding: 15px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 18px;
+            color: #333;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-btn:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 2; /* Increased z-index */
+            border-radius: 8px;
+            overflow: hidden;
+            animation: slideDown 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-item {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pet Adoption Center</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropdown-btn">Menu &#9660;</button>
+            <div class="dropdown-content">
+                <a class="dropdown-item" href="#">Home</a>
+                <a class="dropdown-item" href="#">About Us</a>
+                <a class="dropdown-item" href="#">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <a class="nav-link btn-green" href="shelter.html?shelter=shelter1">Shelter 1</a>
+        <a class="nav-link btn-green" href="shelter.html?shelter=shelter2">Shelter 2</a>
+        <a class="nav-link btn-green" href="shelter.html?shelter=shelter3">Shelter 3</a>
+    </section>
+
+    <section>
+        <a class="nav-link btn-blue" href="inventory.html">Inventory</a>
+        <a class="nav-link btn-blue" href="guide.html">Step-by-Step Guide</a>
+        <a class="nav-link btn-blue" href="vet-directory.html">Vet Directory</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Pet Adoption Center</p>
+    </footer>
+
+</body>
+</html>
