@@ -173,10 +173,53 @@
             bottom: 0;
             width: 100%;
         }
+
+        /* Navigation Bar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 15px;
+            background-color: transparent;
+            /* Set background color to transparent */
+            box-shadow: none;
+            /* Remove the box shadow for transparency */
+            z-index: 1;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            /* Set text color to white or your preferred color */
+            text-decoration: none;
+            padding: 14px 16px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+            /* Add a subtle background color on hover */
+        }
+
+        .dropdown-content {
+            font-size: 1.5em;
+            color: rgb(0, 0, 0);
+            
+        }
+
     </style>
 </head>
 
 <body>
+
+    <div class="navbar">
+        <div class="dropdown-content">
+            <a class="dropdown-item" href="index.html">Home</a>
+            <a class="dropdown-item" href="about.html">About Us</a>
+            <a class="dropdown-item" href="contact.html">Contact Us</a>
+        </div>
+    </div>
+
     <section class="hero">
         <h1>Welcome to the SS Pet Adoption Center</h1>
         <p>Find your <span style="color: #000000;">perfect furry friend</span> and give them a forever home</p>
