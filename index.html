@@ -12,13 +12,11 @@
             padding: 0;
             background-color: #f4f4f4;
             background-image: url('https://placekitten.com/1600/900');
-            /* Replace with your shelter image */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             color: #333;
             overflow: hidden;
-            /* Hide horizontal scrollbar due to fixed background */
         }
 
         header {
@@ -64,7 +62,6 @@
         .nav-link {
             display: inline-block;
             padding: 15px 30px;
-            /* Increased size */
             margin: 10px;
             text-decoration: none;
             font-size: 28px;
@@ -78,7 +75,6 @@
 
         .btn-green {
             background-color: #8dd45b;
-            /* Green color for Inventory */
             color: #fff;
         }
 
@@ -88,7 +84,6 @@
 
         .btn-blue {
             background-color: #3498db;
-            /* Blue color for Step-by-Step Guide */
             color: #fff;
         }
 
@@ -98,12 +93,20 @@
 
         .btn-secondary {
             background-color: rgb(191, 255, 102);
-            /* Red color for Vet Directory */
             color: #fff;
         }
 
         .btn-secondary:hover {
             background-color: rgb(168, 241, 96);
+        }
+
+        .btn-orange {
+            background-color: #ff8c00;
+            color: #fff;
+        }
+
+        .btn-orange:hover {
+            background-color: #d27d00;
         }
 
         footer {
@@ -116,60 +119,66 @@
             width: 100%;
         }
 
-        /* Navigation Bar Styles */
         .navbar {
             position: fixed;
             top: 0;
             right: 0;
             padding: 15px;
             background-color: transparent;
-            /* Set background color to transparent */
             box-shadow: none;
-            /* Remove the box shadow for transparency */
         }
 
         .navbar a {
             color: #000000;
-            /* Set text color to white or your preferred color */
             text-decoration: none;
             padding: 14px 16px;
             display: inline-block;
             transition: background-color 0.3s ease;
         }
-        .btn-orange {
-            background-color: #ff8c00;
-            /* Orange color for Questionnaire */
-            color: #fff;
-        }
-
-        .btn-orange:hover {
-            background-color: #d27d00;
-        }
 
         .navbar a:hover {
             background-color: rgba(0, 0, 0, 0.2);
-            /* Add a subtle background color on hover */
         }
 
         .dropdown-content {
             font-size: 1.5em;
             color: rgb(0, 0, 0);
-            
         }
 
+        .fun-text {
+            font-size: 36px;
+            color: #ad722a;
+            margin-bottom: 20px;
+        }
+
+        .heartbeat {
+            animation: heartbeat 1s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 
 <body>
 
     <header>
-        <h1>Pet Adoption Center</h1>
+        <h1 class="fun-text heartbeat">🐾 Welcome to the Pet Adoption Wonderland 🐾</h1>
     </header>
 
-    <!-- Navigation Bar -->
     <div class="navbar">
         <div class="dropdown-content">
-            <a class="dropdown-item" href="index.html">Home</a>
             <a class="dropdown-item" href="about.html">About Us</a>
             <a class="dropdown-item" href="contact.html">Contact Us</a>
             <a class="dropdown-item" href="login.html">Login</a>
@@ -177,21 +186,23 @@
     </div>
 
     <section>
-        <a class="nav-link btn-green" href="shelter1.html">Indiranagar Shelter</a>
-        <a class="nav-link btn-green" href="shelter2.html">MG Road Shelter</a>
-        <a class="nav-link btn-green" href="shelter3.html">Hebbal Shelter</a>
+        <a class="nav-link btn-green" href="shelter1.html">Explore Indiranagar Shelter</a>
+        <a class="nav-link btn-green" href="shelter2.html">Discover MG Road Shelter</a>
+        <a class="nav-link btn-green" href="shelter3.html">Meet Hebbal Shelter Pets</a>
     </section>
 
     <section>
-        <a class="nav-link btn-blue" href="repository.html">Repository</a>
-        <a class="nav-link btn-blue" href="guide.html">Step-by-Step Guide</a>
-        <a class="nav-link btn-blue" href="vet.html">Vet Directory</a>
+        <a class="nav-link btn-blue" href="repository.html">Check Out Our Pet Repository</a>
+        <a class="nav-link btn-blue" href="guide.html">Follow the Step-by-Step Adoption Guide</a>
+        <a class="nav-link btn-blue" href="vet.html">Find Your Future Pet's Vet</a>
     </section>
+
     <section>
-        <a class="nav-link btn-orange" href="wpet.html">Questionnaire</a>
+        <a class="nav-link btn-orange" href="which-pet-are-you.html">Take the Pet Personality Questionnaire</a>
     </section>
 
     <footer>
+        <p class="fun-text">🐶🐱 Adopt, Love, and Cherish a Furry Friend! 🐾</p>
         <p>&copy; 2023 Pet Adoption Center</p>
     </footer>
 
