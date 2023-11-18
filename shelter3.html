@@ -11,28 +11,46 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            background-image: url('https://c4.wallpaperflare.com/wallpaper/772/373/311/dog-animals-photography-wallpaper-preview.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+            /* overflow: hidden; */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero {
             position: relative;
-            background: url('https://c4.wallpaperflare.com/wallpaper/772/373/311/dog-animals-photography-wallpaper-preview.jpg') center/cover;
-            color: rgb(255, 178, 178);
+            background: rgb(123, 122, 122, 0.5);
             text-align: center;
-            padding: 150px 20px;
-            background-size: cover;
-            background-position: center;
+            padding: 50px 20px;
+            height: 44vh;
         }
 
         .hero h1 {
-            font-size: 2.8em;
+            font-size: 3em;
             font-style: italic;
-            margin-bottom: 20px;
+            margin-bottom: 0px;
+            color: #fff;
         }
 
         .hero p {
-            font-size: 2.2em;
+            font-size: 2em;
             font-style: italic;
             margin-bottom: 40px;
+            color: #fff;
         }
 
         @keyframes pulse {
@@ -66,37 +84,58 @@
         }
 
         .transition-container {
-            opacity: 0;
+            transition: transform 0.5s;
+            opacity: 1;
             transition: opacity 0.3s ease-in-out;
+
         }
 
         .show {
+            transition: 0.5s;
             opacity: 1;
         }
 
         .about-us {
             text-align: center;
-            padding: 10px 20px;
+            padding: 2px 20px;
+            background-color: rgba(123, 122, 122, 0.5);
+            border-radius: 8px;
+            margin: 5px;
+            box-shadow: 0 4px 8px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Add box shadow */
         }
 
         .about-us h2 {
             font-size: 2.0em;
             margin-bottom: 20px;
+            color: #252525;
         }
 
-        .available-pets h2,
-        .testimonials h2 {
+        .about-us p {
+            font-size: 1.1em;
+            color: #ffffff;
+            line-height: 1;
+        }
+
+        .available-pets h2 {
             font-size: 2em;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
+            color: #f4f4f4;
         }
 
         .pet-cards {
             display: flex;
             flex-wrap: wrap;
-            justify-content: flex-start;
+            justify-content: space-around;
             /* Align pet cards to the left */
-            padding: 20px;
+            padding: 30px;
         }
 
         .pet-card {
@@ -106,7 +145,7 @@
             border-radius: 8px;
             margin: 10px;
             padding: 15px;
-            background-color: #fff;
+            background-color: #cfa067;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
             display: flex;
@@ -130,22 +169,24 @@
         .pet-details {
             flex: 0 0 45%;
             /* Adjusted width for better layout */
-            border: 1px solid #ddd;
+            border: 1px solid #000000;
             border-radius: 8px;
             margin: 10px;
             padding: 15px;
             background-color: #fff;
+            color: black;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .pet-details h2 {
             font-size: 1.2em;
             margin-bottom: 8px;
+            color: black;
         }
 
         .pet-details p {
             font-size: 0.9em;
-            color: #555;
+            color: #000000;
 
             margin-bottom: 5px;
         }
@@ -169,18 +210,18 @@
             color: #fff;
             text-align: center;
             padding: 1em;
-            position: fixed;
+            position: relative;
             bottom: 0;
             width: 100%;
         }
 
         /* Navigation Bar Styles */
         .navbar {
-            position: fixed;
+            position: relative;
             top: 0;
             right: 0;
             padding: 15px;
-            background-color: transparent;
+            background-color: rgb(123, 122, 122, 0.5);
             /* Set background color to transparent */
             box-shadow: none;
             /* Remove the box shadow for transparency */
@@ -188,7 +229,7 @@
         }
 
         .navbar a {
-            color: #ffffff;
+            color: #fffafa;
             /* Set text color to white or your preferred color */
             text-decoration: none;
             padding: 14px 16px;
@@ -204,9 +245,8 @@
         .dropdown-content {
             font-size: 1.5em;
             color: rgb(0, 0, 0);
-            
+            margin-left: 75%;
         }
-
     </style>
 </head>
 
@@ -221,27 +261,26 @@
     </div>
 
     <section class="hero">
-        <h1>Welcome to the SS Pet Adoption Center</h1>
-        <p>Find your <span style="color: #000000;">perfect furry friend</span> and give them a forever home</p>
-        <a href="#available-pets" class="cta-button" onclick="showDestination()">View Available Pets</a>
+        <h1>Welcome to Hebbal Shelter</h1>
+        <p>Find your perfect furry friend and give them a forever home</p>
+        <a href="#destination" class="cta-button">View Available Pets</a>
     </section>
 
     <section id="about-us" class="about-us">
         <h2>About Us</h2>
-        <p>Welcome to SS Pet Center, where we believe in finding loving homes for every furry friend. Our mission is to
-            connect pets in need with compassionate individuals and families who are ready to provide a forever home.
-        </p>
-        <p>At SS Pet Center, we are committed to promoting responsible pet ownership and creating a community that
-            values the well-being of animals. Our dedicated team works tirelessly to ensure that each adoption is a
-            perfect match, bringing joy to both pets and adopters alike.</p>
-        <p>Join us in our mission to make a difference in the lives of these wonderful animals. Together, we can create
-            happy tails and lasting memories.</p>
+        <p><strong>Location:</strong> Hebbal, Bangalore</p>
+        <p><strong>Operating Hours:</strong> Monday to Saturday, 09:00 AM - 06:00 PM</p>
+        <p><strong>Phone:</strong> 8642999127 | <strong>Email:</strong> hebbalshelter@gmail.com</p>
+        <p><strong>About the Shelter:</strong> The Hebbal Shelter is a dedicated space for animals in need, providing
+            them with care, shelter, and the opportunity to find loving homes. Our team at Hebbal Shelter is passionate
+            about animal welfare and works tirelessly to ensure the well-being of every resident.</p>
 
     </section>
 
     <div id="destination" class="transition-container">
         <!-- Add these additional pet cards to the existing section with class "pet-cards" -->
         <section id="available-pets" class="available-pets">
+            <h2>Available Pets</h2>
             <div class="pet-cards">
                 <div class="pet-card">
                     <h2>Bella</h2>
@@ -335,9 +374,9 @@
     </script>
 
 
-    <!-- <footer>
-        <p>&copy; 2023 SS Pet Center</p>
-    </footer> -->
+    <footer>
+        <p>&copy; 2023 Sewside_skod copyrights</p>
+    </footer>
 
     <script>
         function redirectToAdoptionForm(petName) {
@@ -346,7 +385,7 @@
             window.location.href = adoptionFormLink;
         }
     </script>
-    
+
     <script>
         function adopt(petName) {
             alert('Congratulations! You have adopted ' + petName + '!');
