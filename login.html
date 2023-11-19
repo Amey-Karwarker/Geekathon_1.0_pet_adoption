@@ -79,19 +79,28 @@
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
 
-        <button type="submit">Login</button>
+        <button type="submit" class="login" id="loginButton">Login</button>
     </form>
 
     <script>
         document.getElementById('loginForm').addEventListener('submit', function (event) {
-            // Simulate a successful login for demonstration purposes
-            // In a real scenario, you would validate the credentials on the server
             event.preventDefault();
 
-            // Redirect to the index page
+            // Hide the login button
+            document.getElementById('loginButton').style.display = 'none';
+
+            // Show an alert (you can replace this with your actual login logic)
+            alert("You logged in successfully");
+
+            // Change the text content of the login button to "Logout"
+            document.getElementById('loginButton').innerText = "Logout";
+
+            // Redirect to index.html after some delay (you can adjust the delay as needed)
             window.location.href = 'index.html';
         });
     </script>
+
+
 
 </body>
 
